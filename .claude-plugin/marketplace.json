@@ -1,0 +1,18 @@
+{
+  "name": "wakkinen-plugins",
+  "description": "Personal Claude Code plugin marketplace — custom skills and tools",
+  "owner": {
+    "name": "Mike Wakkinen"
+  },
+  "plugins": [
+    {
+      "name": "e2e-test-playwright",
+      "description": "E2E browser testing skill using Playwright MCP + superpowers integration. Launches parallel research agents, plans test journeys, then systematically tests every UI flow with screenshots, database validation, and responsive checks.",
+      "version": "1.0.0",
+      "source": "./e2e-test-playwright",
+      "author": {
+        "name": "Mike Wakkinen"
+      }
+    }
+  ]
+}

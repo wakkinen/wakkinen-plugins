@@ -1,0 +1,10 @@
+{
+  "name": "e2e-test-playwright",
+  "description": "E2E browser testing skill using Playwright MCP + superpowers integration",
+  "version": "1.0.0",
+  "author": {
+    "name": "Mike Wakkinen"
+  },
+  "license": "MIT",
+  "keywords": ["e2e", "testing", "playwright", "browser", "ui", "skills"]
+}
