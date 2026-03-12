@@ -5,7 +5,7 @@ Personal Claude Code plugin marketplace — custom skills and tools.
 ## Plugins
 
 ### e2e-test-playwright
-End-to-end browser testing using Playwright MCP + superpowers integration. Launches parallel research agents to analyze your codebase, plans test journeys, then systematically tests every UI flow with screenshots, database validation, and responsive checks.
+Comprehensive E2E browser testing skill leveraging Playwright MCP and superpowers plugin. Adapted from [Cole Medin's e2e-test skill](https://github.com/coleam00/link-in-bio-page-builder/blob/main/.claude/skills/e2e-test/SKILL.md) — replaces agent-browser with Playwright MCP for native Windows support and delegates planning, parallel agents, code review, and verification to superpowers.
 
 **Requires:**
 - Playwright MCP plugin (`/plugin install playwright@claude-plugins-official`)

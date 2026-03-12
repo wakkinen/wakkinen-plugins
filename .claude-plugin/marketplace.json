@@ -7,7 +7,7 @@
   "plugins": [
     {
       "name": "e2e-test-playwright",
-      "description": "E2E browser testing skill using Playwright MCP + superpowers integration. Launches parallel research agents, plans test journeys, then systematically tests every UI flow with screenshots, database validation, and responsive checks.",
+      "description": "Comprehensive E2E browser testing skill leveraging Playwright MCP and superpowers plugin. Adapted from Cole Medin's e2e-test skill — replaces agent-browser with Playwright MCP for native Windows support and delegates planning, parallel agents, code review, and verification to superpowers.",
       "version": "1.0.0",
       "source": "./e2e-test-playwright",
       "author": {
