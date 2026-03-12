@@ -1,7 +1,7 @@
 ---
 name: e2e-test-playwright
 description: End-to-end browser testing using Playwright MCP tools. Integrates with superpowers plugin for planning, parallel agents, code review, and verification. Run after implementation to validate UI, user journeys, and database integrity before code review.
-disable-model-invocation: true
+disable-model-invocation: false
 ---
 
 # E2E Browser Testing with Playwright MCP
