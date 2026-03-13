@@ -25,6 +25,30 @@ Install a plugin:
 /plugin install e2e-test-playwright@wakkinen-plugins
 ```
 
+### Post-Install Setup (e2e-test-playwright)
+
+After installing, Playwright needs to be set up in the plugin's tools directory:
+
+```
+cd C:\Users\<YOU>\.claude\plugins\cache\wakkinen-plugins\e2e-test-playwright\<version>\tools
+npm install
+npx playwright install chromium
+```
+
+To find your exact path:
+```
+dir %USERPROFILE%\.claude\plugins\cache\wakkinen-plugins\e2e-test-playwright\
+```
+
+This only needs to be done once (and again after major version updates).
+
+### Features
+- **CLI mode (default)** — `pw-browser.js` wrapper, one shell exec per action, low token usage
+- **MCP fallback** — If CLI unavailable and Playwright MCP plugin installed, falls back automatically
+- **`PW_MODE` override** — Set `PW_MODE=cli` or `PW_MODE=mcp` to force a mode
+- **`--headed` flag** — Watch the browser in real-time with `--headed` or `PW_HEADED=1`
+- **Mission Control hooks** — Registers/deregisters Claude Code sessions with the dashboard on start/stop
+
 ## Adding New Plugins
 
 Each plugin lives in its own directory with:
