@@ -1,0 +1,9 @@
+{
+  "name": "pw-browser-tools",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Playwright browser tools for e2e-test-playwright plugin",
+  "dependencies": {
+    "playwright": "^1.58.0"
+  }
+}
