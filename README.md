@@ -33,20 +33,23 @@ Install a plugin:
 
 ### Post-Install Setup (e2e-test-playwright)
 
-After installing, Playwright needs to be set up in the plugin's tools directory:
+**Recommended: Global install** (survives plugin updates):
+```
+npm install -g playwright
+npx playwright install chromium
+```
 
+**Alternative: Local install** (must redo after each plugin version update):
 ```
 cd C:\Users\<YOU>\.claude\plugins\cache\wakkinen-plugins\e2e-test-playwright\<version>\tools
 npm install
 npx playwright install chromium
 ```
 
-To find your exact path:
+To find your exact cache path:
 ```
 dir %USERPROFILE%\.claude\plugins\cache\wakkinen-plugins\e2e-test-playwright\
 ```
-
-This only needs to be done once (and again after major version updates).
 
 ### Features
 - **CLI mode (default)** — `pw-browser.js` wrapper, one shell exec per action, low token usage
