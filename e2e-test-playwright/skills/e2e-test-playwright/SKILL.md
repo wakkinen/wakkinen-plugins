@@ -9,9 +9,16 @@ disable-model-invocation: false
 > **Requires:** superpowers plugin (planning, parallel dispatch, verification)
 > **Browser Mode:** CLI (default) or MCP (optional, higher token usage)
 
-## Browser Modes
+## Browser Mode Selection
 
-### CLI Mode (Default) — Lower Token Usage
+**Priority order (automatic fallback):**
+1. **CLI mode** (default) — Use `pw-browser.js` if available. Lower token usage, one exec per action.
+2. **MCP mode** (fallback) — If CLI is unavailable (no pw-browser.js or Playwright not installed locally), fall back to Playwright MCP tools if the MCP plugin is installed.
+3. **Fail** — If neither CLI nor MCP is available, stop and tell the user what to install.
+
+**Override:** Set `PW_MODE=mcp` env var to force MCP mode, or `PW_MODE=cli` to force CLI mode (no fallback).
+
+## CLI Mode (Default) — Lower Token Usage
 Uses `pw-browser.js` CLI wrapper. One shell exec per action = fewer tokens.
 
 ```
@@ -57,10 +64,12 @@ To use MCP mode, install: `/plugin install playwright@claude-plugins-official`
 ### 1. Verify Frontend Exists
 Check for `package.json` with dev/start script, frontend framework files, or web server config. If no browser-accessible UI → stop.
 
-### 2. Verify Playwright Available
-**CLI mode:** Check that `pw-browser.js` exists in the skill tools directory. If Playwright isn't installed, run setup (see above).
-
-**MCP mode:** Try `browser_navigate` to a test URL. If unavailable, fall back to CLI mode.
+### 2. Determine Browser Mode
+Follow the priority order above:
+1. Check if `pw-browser.js` exists in skill tools directory → **CLI mode**
+2. If not, check if `browser_navigate` MCP tool is available → **MCP mode**
+3. If neither, tell user to install: `cd <skill-directory>/tools && npm install playwright && npx playwright install chromium`
+4. Check `PW_MODE` env var for override
 
 ### 3. Verify Superpowers Available
 This skill delegates planning, research, and verification to superpowers. If not installed:
