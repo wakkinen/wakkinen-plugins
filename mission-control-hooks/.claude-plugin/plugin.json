@@ -1,5 +1,5 @@
 {
   "name": "mission-control-hooks",
   "description": "Claude Code session registration hooks for Mission Control dashboard. Registers on SessionStart, deregisters on Stop.",
-  "version": "1.1.0"
+  "version": "1.2.0"
 }
