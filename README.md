@@ -11,6 +11,11 @@ Comprehensive E2E browser testing skill leveraging Playwright and superpowers pl
 - [Superpowers](https://github.com/obra/superpowers) (`/plugin install superpowers@claude-plugins-official`)
 - Optional: [Playwright MCP](https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/playwright) (`/plugin install playwright@claude-plugins-official`) — only needed for MCP mode
 
+### mission-control-hooks
+Claude Code session registration hooks for [Mission Control dashboard](https://github.com/wakkinen/OpenClawCustomDashboard). No skills — hooks only. Registers each Claude Code session on start, deregisters on stop. Sends project name, PID, and working directory to `localhost:7777/api/agents`.
+
+**No dependencies.** Silently does nothing if the dashboard isn't running.
+
 ## Installation
 
 Add this marketplace to Claude Code:
@@ -23,6 +28,7 @@ Install a plugin:
 
 ```
 /plugin install e2e-test-playwright@wakkinen-plugins
+/plugin install mission-control-hooks@wakkinen-plugins
 ```
 
 ### Post-Install Setup (e2e-test-playwright)
@@ -47,7 +53,6 @@ This only needs to be done once (and again after major version updates).
 - **MCP fallback** — If CLI unavailable and Playwright MCP plugin installed, falls back automatically
 - **`PW_MODE` override** — Set `PW_MODE=cli` or `PW_MODE=mcp` to force a mode
 - **`--headed` flag** — Watch the browser in real-time with `--headed` or `PW_HEADED=1`
-- **Mission Control hooks** — Registers/deregisters Claude Code sessions with the dashboard on start/stop
 
 ## Adding New Plugins
 
