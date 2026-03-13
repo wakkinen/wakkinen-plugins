@@ -8,7 +8,7 @@
     {
       "name": "e2e-test-playwright",
       "description": "Comprehensive E2E browser testing skill leveraging Playwright and superpowers. CLI mode (default, lower tokens) with MCP fallback. Adapted from Cole Medin's e2e-test skill.",
-      "version": "1.1.1",
+      "version": "1.2.0",
       "source": "./e2e-test-playwright",
       "author": {
         "name": "Mike Wakkinen"
