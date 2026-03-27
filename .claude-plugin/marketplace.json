@@ -7,9 +7,18 @@
   "plugins": [
     {
       "name": "e2e-test-playwright",
-      "description": "Comprehensive E2E browser testing with superpowers integration. Two skills: e2e-test-playwright (proven, CLI default) and e2e-test-agent-browser (experimental, native Rust CLI).",
-      "version": "1.4.0",
+      "description": "Comprehensive E2E browser testing skill leveraging Playwright and superpowers. CLI mode (default, lower tokens) with MCP fallback.",
+      "version": "1.3.0",
       "source": "./e2e-test-playwright",
+      "author": {
+        "name": "Mike Wakkinen"
+      }
+    },
+    {
+      "name": "e2e-test-agent-browser",
+      "description": "E2E browser testing using Vercel's agent-browser CLI (native Rust). Faster than Playwright, no Node.js runtime needed. Uses superpowers for planning and verification.",
+      "version": "1.0.0",
+      "source": "./e2e-test-agent-browser",
       "author": {
         "name": "Mike Wakkinen"
       }

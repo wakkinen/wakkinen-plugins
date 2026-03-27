@@ -1,0 +1,10 @@
+{
+  "name": "e2e-test-agent-browser",
+  "description": "E2E browser testing using Vercel's agent-browser CLI (native Rust). Faster than Playwright, no Node.js runtime needed. Uses superpowers for planning and verification.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Mike Wakkinen"
+  },
+  "license": "MIT",
+  "keywords": ["e2e", "testing", "agent-browser", "browser", "ui", "skills"]
+}
