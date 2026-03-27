@@ -7,8 +7,8 @@
   "plugins": [
     {
       "name": "e2e-test-playwright",
-      "description": "Comprehensive E2E browser testing skill leveraging Playwright and superpowers. CLI mode (default, lower tokens) with MCP fallback. Adapted from Cole Medin's e2e-test skill.",
-      "version": "1.3.0",
+      "description": "Comprehensive E2E browser testing with superpowers integration. Two skills: e2e-test-playwright (proven, CLI default) and e2e-test-agent-browser (experimental, native Rust CLI).",
+      "version": "1.4.0",
       "source": "./e2e-test-playwright",
       "author": {
         "name": "Mike Wakkinen"

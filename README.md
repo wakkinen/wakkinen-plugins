@@ -7,8 +7,14 @@ Personal Claude Code plugin marketplace — custom skills and tools.
 ### e2e-test-playwright
 Comprehensive E2E browser testing skill leveraging Playwright and superpowers plugin. Adapted from [Cole Medin's e2e-test skill](https://github.com/coleam00/link-in-bio-page-builder/blob/main/.claude/skills/e2e-test/SKILL.md). Supports two modes: **CLI (default)** for lower token usage via `pw-browser.js`, or **MCP** for richer but token-heavy native browser tools. CLI mode recommended per feedback from Rajesh Godavarthi.
 
+**Includes two skills:**
+- **e2e-test-playwright** — Playwright-based (default, proven)
+- **e2e-test-agent-browser** — [Vercel agent-browser](https://github.com/vercel-labs/agent-browser) (experimental, native Rust, faster startup)
+
 **Requires:**
 - [Superpowers](https://github.com/obra/superpowers) (`/plugin install superpowers@claude-plugins-official`)
+- For Playwright skill: Playwright installed (`npm install -g playwright && npx playwright install chromium`)
+- For agent-browser skill: agent-browser installed (`npm install -g agent-browser && agent-browser install`)
 - Optional: [Playwright MCP](https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/playwright) (`/plugin install playwright@claude-plugins-official`) — only needed for MCP mode
 
 ### mission-control-hooks
